@@ -5,11 +5,16 @@ class IndecisionApp extends React.Component {
     this.handlePick = this.handlePick.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleDeleteOption = this.handleDeleteOption.bind(this);
+    this.random6gen = this.random6gen.bind(this)
+    this.graphic = this.graphic.bind(this)
     this.state = { 
       options: []
     };
   }
-
+  random6gen(){
+    let num = (Math.random() * 10).toFixed(2);
+    return num
+  }
   componentDidMount(){
     console.log('fetching data')
     try{
@@ -57,7 +62,11 @@ class IndecisionApp extends React.Component {
         options: prevState.options.concat(option)
     }) );
   }
+  graphic(size){
+    let num = Math.round(size);
 
+    return `8${'='.repeat(num)}>`;
+  }
   render() {
     const subtitle = `Let computer make decisions for you`;
     return (
