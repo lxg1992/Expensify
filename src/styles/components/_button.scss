@@ -33,3 +33,9 @@
   border: none;
   color: $off-white;
 }
+
+@media (max-width: $desktop-breakpoint) {
+  .big-button{
+    margin: $s-size 0;
+  }
+}
