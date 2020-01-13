@@ -9,7 +9,6 @@ const OptionModal = (props) => (
   >
     <h3>Selected Option</h3>
     {props.selectedOption && <p>{props.selectedOption}</p>}
-    //Alternatively: props.handleClearModal
     <button onClick={() => {props.handleClearModal()}}>OK</button>
   </Modal>
 )
