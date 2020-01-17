@@ -5,4 +5,4 @@ import './styles/styles.scss';
 import 'normalize.css/normalize.css';
 
 
-ReactDOM.render(<AppRoudter />, document.getElementById('app'));
+ReactDOM.render(<AppRouter />, document.getElementById('app'));
