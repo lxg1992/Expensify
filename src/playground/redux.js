@@ -14,14 +14,12 @@ const resetCount = () => ({
 const setCount = ({count}) => ({
   type: 'SET',
   count
-
 })
+
 const decrementCount = ({decrementBy = 1} = {}) => ({
   type: 'DECREMENT',
   decrementBy 
 })
-
-
 
 const store = createStore((state = {count: 0}, action) => {
   switch(action.type){
@@ -44,12 +42,10 @@ const store = createStore((state = {count: 0}, action) => {
     default:
       return state;    
   }
-
 })
 
 const unsub = store.subscribe(() => {
   console.log(store.getState());
-
 })
 
 store.dispatch({
