@@ -18,23 +18,23 @@ const store = configureStore();
 //     }
 // )
 
-// store.dispatch(addExpense(
-//     {
-//         description: 'Water bill', 
-//         amount: 200,
-//         createdAt: 2000,
-//     }
-// ))
+store.dispatch(addExpense(
+    {
+        description: 'Water bill', 
+        amount: 200,
+        createdAt: 2000,
+    }
+))
 
-// store.dispatch(addExpense(
-//     {
-//         description: 'Gas bill',
-//         amount: 2000,
-//         createdAt: 3000
-//     }
-// ))
+store.dispatch(addExpense(
+    {
+        description: 'Gas bill',
+        amount: 2000,
+        createdAt: 3000
+    }
+))
 
-// store.dispatch(setTextFilter('bill'))
+store.dispatch(setTextFilter('bill'))
 
 const jsx = (
     <Provider store={store}>
