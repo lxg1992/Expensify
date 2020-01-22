@@ -18,6 +18,7 @@ const store = configureStore();
 //     }
 // )
 
+
 store.dispatch(addExpense(
     {
         description: 'Water bill', 
@@ -25,6 +26,8 @@ store.dispatch(addExpense(
         createdAt: 2000,
     }
 ))
+
+
 
 store.dispatch(addExpense(
     {
@@ -41,6 +44,5 @@ const jsx = (
         <AppRouter />
     </Provider>
 )
-
 
 ReactDOM.render(jsx, document.getElementById('app'));
