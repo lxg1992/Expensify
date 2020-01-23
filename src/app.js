@@ -11,13 +11,6 @@ import 'normalize.css/normalize.css';
 
 const store = configureStore();
 
-// const unsub = store.subscribe(() => {
-//         const curState = store.getState();
-//         const visibleExpenses = getVisibleExpenses(curState.expenses, curState.filters);
-//         console.log(visibleExpenses);
-//     }
-// )
-
 
 store.dispatch(addExpense(
     {
