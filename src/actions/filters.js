@@ -24,3 +24,10 @@ export const setEndDate = (endDate = undefined) => ({
     endDate
 })
   
+export const sortAscending = () => ({
+    type: 'SORT_ASCENDING'
+})
+
+export const sortDescending = () => ({
+    type: 'SORT_DESCENDING'
+})
