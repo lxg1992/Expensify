@@ -9,7 +9,7 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "start": "node server/server.js",
-    "heroku-postbuild":"npm run build:prod"
+    "heroku-postbuild": "npm run build:prod"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
     "moment": "^2.18.1",
     "node-sass": "^4.13.0",
     "normalize.css": "^7.0.0",
+    "numeral": "^2.0.6",
     "react": "^16.0.0",
     "react-addons-shallow-compare": "^15.6.0",
     "react-dates": "^12.7.0",
@@ -44,6 +45,5 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^2.5.1"
-
   }
 }
