@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { removeExpense } from '../actions/expenses'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import moment from 'moment'
 import numeral from 'numeral'
