@@ -14,7 +14,7 @@ const ExpensesSummary = (props) => {
         {
             expensesCount > 0 ? 
                 expenseOrExpenses(expensesCount) +
-                'amounting to' +
+                'amounting to ' +
                 numeral(
                     expensesTotal(
                         expensesSelector(

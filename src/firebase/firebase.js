@@ -16,27 +16,29 @@ firebase.initializeApp(config)
 
 const database = firebase.database()
 
-database.ref().set(null)
+export { firebase, database as default}
 
-database.ref('expenses')
-  .on('child_removed', (ss) => {
-    console.log(ss.key, ss.val())
-  })
+// database.ref().set(null)
 
-database.ref('expenses')
-  .on('child_changed', (ss) => {
-    console.log(ss.key, ss.val())
-  })
+// database.ref('expenses')
+//   .on('child_removed', (ss) => {
+//     console.log(ss.key, ss.val())
+//   })
 
-database.ref('expenses')
-  .on('child_added', (ss) => {
-    console.log(ss.key, ss.val())
-  })
+// database.ref('expenses')
+//   .on('child_changed', (ss) => {
+//     console.log(ss.key, ss.val())
+//   })
 
-database.ref('expenses').push({
-  name: 'Phone bill',
-  amount: 4500
-})
+// database.ref('expenses')
+//   .on('child_added', (ss) => {
+//     console.log(ss.key, ss.val())
+//   })
+
+// database.ref('expenses').push({
+//   name: 'Phone bill',
+//   amount: 4500
+// })
 
 
 
@@ -44,7 +46,7 @@ database.ref('expenses').push({
 //   .on('value', (ss) => {
 //     const expenses = []
 //     ss.forEach( (ssChild) => {
-//       expenses.push({
+//       expenses.push({  
 //         id: ssChild.key,
 //         ...ssChild.val()
 //       })
@@ -134,12 +136,3 @@ database.ref('expenses').push({
 // })
 
 
-function pigIt(str){
-  return str.split(' ').map((item,index) => {
-    if(item.test(/\w/g)){
-      return item.slice(1) + item.slice(0,1) + 'ay'
-    }
-  })
-}
-
-console.log(pigIt('This string is fucking based!'))

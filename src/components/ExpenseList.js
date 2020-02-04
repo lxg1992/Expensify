@@ -5,10 +5,8 @@ import getFilteredExpenses from '../selectors/expenses'
 
 
 const ExpenseList = (props) => {
-    
-
-
-    return (<div>
+    return (
+    <div>
         {props.expenses.length ? <h1>Expense List</h1> : <h3>No expenses</h3>}
         {props.expenses.map((expense) => (
             <ExpenseListItem key={expense.id} {...expense} />

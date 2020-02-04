@@ -1,7 +1,7 @@
 import React from 'react'
 import ExpenseForm from './ExpenseForm'
 import { connect } from 'react-redux'
-import {addExpense} from '../actions/expenses'
+import {startAddExpense} from '../actions/expenses'
 
 
 const AddExpensePage = (props) => (
@@ -9,13 +9,16 @@ const AddExpensePage = (props) => (
     <h1>Add Expense</h1>
     <ExpenseForm
       onSubmit={(expense) => {
-        props.dispatch(addExpense(expense))
+        props.startAddExpense(expense)
         props.history.push('/')
       }}
     />
   </div>
 )
 
+const mapDispatchToProps = (dispatch) => ({
+  startAddExpense: (expense) => dispatch(startAddExpense(expense))
+})
 
 
-export default connect()(AddExpensePage)
+export default connect(undefined, mapDispatchToProps)(AddExpensePage)
