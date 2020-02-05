@@ -13,5 +13,6 @@ Utilizing:
   * React-Redux
 * Firebase
   * Google Firebase
-  
+* Express
+  * Server
 Currently work in progress
