@@ -8,20 +8,18 @@ export const addExpense = (expense) => ({
 
 export const startAddExpense = (expenseData = {}) => {
   return (dispatch) => {
-    const {
-      description = '', note ='', amount = 0, createdAt = 0
-    } = expenseData;
+    const { description = '', note ='', amount = 0, createdAt = 0 } = expenseData;
     const expense = { description, note, amount, createdAt }
-
     database.ref('expenses').push(expense).then((ref) => {
       dispatch(addExpense({
         id: ref.key,
         ...expense
       }))
     })
-
   }
 }
+
+
   
   //EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
@@ -35,6 +33,20 @@ export const removeExpense = ({id} = {}) => ({
     type: 'REMOVE_EXPENSE',
     id
 })
+
+export const startRemoveExpense = ({id}) => {
+  return (dispatch) => {
+    database.ref('expenses').child(id).remove()
+      .then(() => {
+        dispatch(removeExpense({id}))
+      })
+      .catch(() => {
+        console.log("Unable to remove")
+      })
+  }
+}
+
+
 
 export const setExpenses = (expenses) => ({
   type: 'SET_EXPENSES',

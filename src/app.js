@@ -23,7 +23,7 @@ const root = document.getElementById('app')
 //     }
 // ))
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<h1 style={{backgroundColor:"black", color:"white"}}>Loading...</h1>, document.getElementById('app'));
 
 const jsx = (
     <Provider store={store}>
