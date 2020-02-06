@@ -17,6 +17,8 @@ export default (state = [], action) => {
         return state.filter((item) => {
           return item.id !== action.id
         })
+      case 'SET_EXPENSES':
+        return action.expenses
       default:
         return state;
     }
