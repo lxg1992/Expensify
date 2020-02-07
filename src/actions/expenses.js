@@ -27,6 +27,18 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 })
+
+export const startEditExpense = (id, updates) => {
+  return (dispatch) => {
+    return database.ref('expenses').child(id).update(updates)
+      .then(() => {
+        dispatch(editExpense(id,updates))
+      })
+      .catch((err) => {
+        console.log("Error: ", err)
+      })
+  }
+}
   
   //REMOVE_EXPENSE
 export const removeExpense = ({id} = {}) => ({
@@ -34,14 +46,14 @@ export const removeExpense = ({id} = {}) => ({
     id
 })
 
-export const startRemoveExpense = ({id}) => {
+export const startRemoveExpense = ({id} = {}) => {
   return (dispatch) => {
-    database.ref('expenses').child(id).remove()
+    return database.ref('expenses').child(id).remove()
       .then(() => {
         dispatch(removeExpense({id}))
       })
-      .catch(() => {
-        console.log("Unable to remove")
+      .catch((err) => {
+        console.log("Error: ", err)
       })
   }
 }

@@ -8,7 +8,7 @@ import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } fro
 import getVisibleExpenses from './selectors/expenses';
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
-import './firebase/firebase';
+import {firebase} from './firebase/firebase';
 
 const store = configureStore();
 
@@ -33,4 +33,12 @@ const jsx = (
 
 store.dispatch(startSetExpenses()).then(() => {
     ReactDOM.render(jsx, root)
+})
+
+firebase.auth().onAuthStateChanged((user) => {
+    if(user){
+        console.log(`${user} logged in`)
+    } else {
+        console.log(`${user} logged out`)
+    }
 })
