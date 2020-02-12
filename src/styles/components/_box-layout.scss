@@ -15,5 +15,18 @@
 }
 
 .box-layout__box {
-    background: fade-out($color: white, $amount: .20)
+    transition: all 0.1s;
+    background: fade-out($color: white, $amount: .40);
+    border-radius: 10px;
+    text-align:center;
+    padding: $l-size $m-size;
+    width: 35rem;
+}
+
+.box-layout__box:hover{
+    transition: transform 0.1s;
+    transform: scale(1.05);
+    box-shadow:0px 10px 5px grey;
+    background: fade-out($color: white, $amount: .1);
+
 }
