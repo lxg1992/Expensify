@@ -30,3 +30,8 @@
     background: fade-out($color: white, $amount: .1);
 
 }
+
+.box-layout__title {
+    margin: 0 0 $m-size;
+    line-height: 1;
+}
