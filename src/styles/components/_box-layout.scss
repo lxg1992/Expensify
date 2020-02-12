@@ -35,3 +35,26 @@
     margin: 0 0 $m-size;
     line-height: 1;
 }
+
+.box-layout__button {
+    max-width: 400px;
+    width: 80%;
+    border:none;
+    padding: $m-size $xxl-size;
+    margin-top: $xs-size;
+    border-radius: 3px;
+    outline: none;
+}
+
+.box-layout__googleButton {
+    background-color: white;
+    color: #4081ED;
+    border: 1px #4081ED solid;
+}
+
+.box-layout__githubButton {
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+

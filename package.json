@@ -16,6 +16,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
