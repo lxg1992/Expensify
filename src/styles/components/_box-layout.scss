@@ -1,0 +1,21 @@
+.box-layout {
+    background: url('/images/bg.jpg');
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-repeat: no-repeat;
+    background-size:contain;
+    height: 100vh;
+    width: 100vw;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e0f3fa+0,d8f0fc+50,b8e2f6+50,b6dffd+100&0.5+25,1+50,0.51+75 */
+background: -moz-linear-gradient(top,  rgba(224,243,250,0.5) 0%, rgba(204,235,248,0.5) 25%, rgba(184,226,246,1) 50%, rgba(183,225,250,0.51) 75%, rgba(182,223,253,0.51) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(224,243,250,0.5) 0%,rgba(204,235,248,0.5) 25%,rgba(184,226,246,1) 50%,rgba(183,225,250,0.51) 75%,rgba(182,223,253,0.51) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(224,243,250,0.5) 0%,rgba(204,235,248,0.5) 25%,rgba(184,226,246,1) 50%,rgba(183,225,250,0.51) 75%,rgba(182,223,253,0.51) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e0f3fa', endColorstr='#82b6dffd',GradientType=0 ); /* IE6-9 */
+
+}
+
+.box-layout__box {
+    background: fade-out($color: white, $amount: .15)
+}
