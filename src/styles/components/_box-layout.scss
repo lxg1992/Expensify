@@ -58,3 +58,12 @@
     border: 1px black solid;
 }
 
+.box-layout__googleButton:active{
+    background-color: #4081ED;
+    color:white;
+}
+
+.box-layout__githubButton:active{
+    background-color: black;
+    color:white;
+}

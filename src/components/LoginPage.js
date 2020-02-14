@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { startLogin, startGithubLogin } from '../actions/auth'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {  } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
