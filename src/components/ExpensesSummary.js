@@ -4,8 +4,9 @@ import expensesSelector from '../selectors/expenses'
 import expensesTotal from '../selectors/expensesTotal'
 import numeral from 'numeral'
 import { Link } from 'react-router-dom';
+import {startClearExpenses} from '../actions/expenses';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPlusCircle} from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle, faBan} from '@fortawesome/free-solid-svg-icons'
 
 const ExpensesSummary = (props) => {
     const filteredExpenses = expensesSelector(props.expenses, props.filters)
@@ -34,7 +35,10 @@ const ExpensesSummary = (props) => {
                 </h1>
                 <div className="page-header__actions">
                     <Link className="button" to='/create'><FontAwesomeIcon icon={faPlusCircle}/></Link>
-                    
+                    <button
+                        className="button__red"
+                        onClick={() => props.startClearExpenses()}
+                    ><FontAwesomeIcon icon={faBan}></FontAwesomeIcon></button>
                 </div>
             </div>
         </div>
@@ -48,7 +52,13 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(ExpensesSummary)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        startClearExpenses: () => dispatch(startClearExpenses())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ExpensesSummary)
 
 
 

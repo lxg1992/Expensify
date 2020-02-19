@@ -64,15 +64,17 @@ export const startRemoveExpense = ({id} = {}) => {
 }
 
 export const clearExpenses = () => {
-  type: 'CLEAR_EXPENSES'
+  return {
+    type: 'CLEAR_EXPENSES',
+  }
 }
 
 export const startClearExpenses = () => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid
-    return database.ref(`users/${uid}/expenses}`).set(null)
+    return database.ref(`users/${uid}/expenses`).set(null)
       .then(() =>{
-        dispatch(clearExpenses())
+        dispatch(startSetExpenses())
       })
       .catch((err) => {
         console.log("Error while clearing expenses :: ", err)

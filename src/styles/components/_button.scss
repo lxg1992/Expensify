@@ -22,3 +22,10 @@
     background: $dark-grey;
     color: $off-white;
 }
+
+.button__red{
+    @extend .button;
+    background: rgb(211, 60, 0);
+    color: $off-white;
+    margin-left: 2rem;
+}
