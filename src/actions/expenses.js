@@ -73,7 +73,7 @@ export const setExpenses = (expenses) => ({
 export const startSetExpenses = () => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid
-    return database.ref('expenses')
+    return database.ref(`users/${uid}/expenses`)
       .once('value').then((ss) => {
         const expenses = []
         ss.forEach((ssChild) => {
