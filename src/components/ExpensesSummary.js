@@ -34,6 +34,7 @@ const ExpensesSummary = (props) => {
                 </h1>
                 <div className="page-header__actions">
                     <Link className="button" to='/create'><FontAwesomeIcon icon={faPlusCircle}/></Link>
+                    
                 </div>
             </div>
         </div>
