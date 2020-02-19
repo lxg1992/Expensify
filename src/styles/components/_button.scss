@@ -6,7 +6,7 @@
     border:none;
     background: $blue;
     padding: $m-size $xxl-size;
-    margin-top: $xs-size;
+    
     border-radius: 3px;
     outline: none;
     line-height: 1;
@@ -15,4 +15,10 @@
 .button__logout {
     background:none;
     color:$off-white;
+}
+
+.button__grey{
+    @extend .button;
+    background: $dark-grey;
+    color: $off-white;
 }
