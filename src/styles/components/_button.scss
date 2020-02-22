@@ -1,31 +1,31 @@
 .button {
-    display: inline-block;
-    color:white;
-    text-align:center;
-    text-decoration: none;
-    border:none;
-    background: $blue;
-    padding: $m-size $xxl-size;
-    
-    border-radius: 3px;
-    outline: none;
-    line-height: 1;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background: $blue;
+  padding: $m-size $xxl-size;
+
+  border-radius: 3px;
+  outline: none;
+  line-height: 1;
 }
 
 .button__logout {
-    background:none;
-    color:$off-white;
+  background: none;
+  color: $off-white;
 }
 
-.button__grey{
-    @extend .button;
-    background: $dark-grey;
-    color: $off-white;
+.button__grey {
+  @extend .button;
+  background: $dark-grey;
+  color: $off-white;
 }
 
-.button__red{
-    @extend .button;
-    background: rgb(211, 60, 0);
-    color: $off-white;
-    margin-left: 2rem;
+.button__red {
+  @extend .button;
+  background: rgb(211, 60, 0);
+  color: $off-white;
+  margin-left: 2rem;
 }
