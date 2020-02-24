@@ -17,4 +17,6 @@ Utilizing:
   * Server
 
 
-Currently work in progress
+Demo: https://react-finance-tracker.herokuapp.com/
+
+
